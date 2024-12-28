@@ -16,7 +16,7 @@
       justify-content: space-between;
       align-items: center;
       height: 100vh;
-      background: #ffffff; /* Set background to white */
+      background: #ffffff;
       color: #333;
     }
     .container {
@@ -25,24 +25,24 @@
       display: flex;
       flex-direction: column;
       justify-content: center;
-      align-items: center; /* Center align all child elements */
+      align-items: center;
     }
     h1 {
       font-size: 3rem;
       margin-bottom: 20px;
-      font-weight: 400; /* Light */
+      font-weight: 400;
       color: #b7c1b9;
     }
     p {
       font-size: 1.2rem;
       margin-bottom: 30px;
       font-weight: 400;
-      line-height: 1.5; /* Standard line height for smaller screens */
+      line-height: 1.5;
     }
     .logo {
-      width: 450px; /* Adjusted for desktop */
+      width: 450px;
       margin-bottom: 20px;
-      display: block; /* Ensures it behaves predictably */
+      display: block;
     }
     .btn {
       display: inline-block;
@@ -55,9 +55,9 @@
       cursor: pointer;
       text-decoration: none;
       transition: background 0.3s ease;
-      width: 50%; /* Reduced width */
+      width: 50%;
       text-align: center;
-      margin: 0 auto; /* Centers button horizontally */
+      margin: 0 auto;
     }
     .btn:hover {
       background: #9ea89f;
@@ -71,23 +71,29 @@
 
     /* Responsive Design */
     @media (min-width: 1024px) {
-      p {
-        white-space: nowrap; /* Prevent text wrapping for desktop screens */
-        font-size: 1.2rem;
-        line-height: normal; /* Ensure it fits on one line */
+      .desktop-line {
+        display: inline; /* Show inline text for desktop */
+      }
+      .mobile-line {
+        display: none; /* Hide second line for desktop */
       }
     }
 
     @media (max-width: 1024px) {
-      .logo {
-        width: 350px;
+      .desktop-line {
+        display: none; /* Hide inline text for mobile */
+      }
+      .mobile-line {
+        display: inline; /* Show second line for mobile */
       }
     }
+
     @media (max-width: 768px) {
       .logo {
         width: 250px;
       }
     }
+
     @media (max-width: 480px) {
       .logo {
         width: 150px;
@@ -99,7 +105,11 @@
   <div class="container">
     <img src="logo.png" alt="Sage Hospitality Logo" class="logo">
     <h1>Coming Soon</h1>
-    <p>Our website is under construction. Stay tuned!</p>
+    <p>
+      Our website is under construction.
+      <span class="desktop-line"> Stay tuned!</span>
+      <span class="mobile-line"><br>Stay tuned!</span>
+    </p>
     <a href="mailto:info@sagehospitality.ca" class="btn">Contact Us</a>
   </div>
   <footer>&copy; 2024 Sage Hospitality Canada. All rights reserved.</footer>
