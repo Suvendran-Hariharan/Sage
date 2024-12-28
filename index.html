@@ -37,6 +37,7 @@
       font-size: 1.2rem;
       margin-bottom: 30px;
       font-weight: 400;
+      line-height: 1.5; /* Standard line height for smaller screens */
     }
     .logo {
       width: 450px; /* Adjusted for desktop */
@@ -69,6 +70,14 @@
     }
 
     /* Responsive Design */
+    @media (min-width: 1024px) {
+      p {
+        white-space: nowrap; /* Prevent text wrapping for desktop screens */
+        font-size: 1.2rem;
+        line-height: normal; /* Ensure it fits on one line */
+      }
+    }
+
     @media (max-width: 1024px) {
       .logo {
         width: 350px;
