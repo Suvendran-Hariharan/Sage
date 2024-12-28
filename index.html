@@ -25,6 +25,7 @@
       display: flex;
       flex-direction: column;
       justify-content: center;
+      align-items: center; /* Center align all child elements */
     }
     h1 {
       font-size: 3rem;
@@ -38,31 +39,28 @@
       font-weight: 400;
     }
     .logo {
-      width: 450px; /* Increased size 3 times */
+      width: 450px; /* Adjusted for desktop */
       margin-bottom: 20px;
+      display: block; /* Ensures it behaves predictably */
     }
-    
     .btn {
       display: inline-block;
-      padding: 10px 20px; /* Keep padding the same */
+      padding: 10px 20px;
       font-size: 1rem;
       color: #fff;
-      background: #b7c1b9; /* Button color */
+      background: #b7c1b9;
       border: none;
       border-radius: 5px;
       cursor: pointer;
       text-decoration: none;
       transition: background 0.3s ease;
-      width: 50%; /* Reduced width to 50% */
-      text-align: center; /* Ensures the text is centered */
-      margin: 0 auto; /* Centers the button horizontally */
+      width: 50%; /* Reduced width */
+      text-align: center;
+      margin: 0 auto; /* Centers button horizontally */
     }
-
     .btn:hover {
-      background: #9ea89f; /* Hover color */
+      background: #9ea89f;
     }
-
-
     footer {
       font-size: 0.9rem;
       color: #777;
@@ -75,48 +73,16 @@
       .logo {
         width: 350px;
       }
-      h1 {
-        font-size: 2.5rem;
-        color: #b7c1b9;
-      }
-      p {
-        font-size: 1.1rem;
-      }
-      .container {
-      justify-content: center;
     }
-    }
-
     @media (max-width: 768px) {
       .logo {
         width: 250px;
       }
-      h1 {
-        font-size: 2rem;
-        color: #b7c1b9;
-      }
-      p {
-        font-size: 1rem;
-      }
-      .container {
-      justify-content: center;
     }
-    }
-
     @media (max-width: 480px) {
       .logo {
         width: 150px;
       }
-      h1 {
-        font-size: 1.5rem;
-        color: #b7c1b9;
-      }
-      p {
-        font-size: 0.9rem;
-      }
-      .container {
-      justify-content: center;
-    }
     }
   </style>
 </head>
